@@ -1,3 +1,7 @@
+#include "stdlib.h"
+#include "string"
+#include "Utils.h"
+
 class Move {
     public:
     std::string name;

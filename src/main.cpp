@@ -1,13 +1,7 @@
 #include <string>
 #include <vector>
-#include <cmath>
-#include <algorithm>
-#include <stdio.h>
-
-#include "Moves.h"
-#include "Pokemon.h"
 #include "State.h"
-#include "Utils.h"
+
 
 int main()
 {

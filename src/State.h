@@ -1,3 +1,5 @@
+#include "Pokemon.h"
+
 class State {
     public:
     Pokemon* p1; int hp1;
