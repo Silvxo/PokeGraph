@@ -1,3 +1,4 @@
+#pragma once
 #include <string>
 #include <unordered_map>
 #include <vector>
@@ -27,16 +28,16 @@ public:
         if (!nodes.count(id))
             nodes[id] = Node{s, {}};
     }
-    
+
     void AddEdge(State& from, int i, int j) {
 
         State next = from.Step(i, j);
         std::string fromId = from.Identity();
         std::string toId   = next.Identity();
-        
+
         AddState(from);
         AddState(next);
-        
+
         nodes[fromId].adj.push_back(Edge{
             toId,
             from.p1->moves[i].name + " | " + from.p2->moves[j].name

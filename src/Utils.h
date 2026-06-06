@@ -1,9 +1,10 @@
+#pragma once
 #include "stdlib.h"
 #include <cmath>
 
 
 enum Type {
-    NORMAL, FIRE, WATER, ELECTRIC, GRASS, ICE, FIGHTING, POISON, GROUND, FLYING, 
+    NORMAL, FIRE, WATER, ELECTRIC, GRASS, ICE, FIGHTING, POISON, GROUND, FLYING,
     PSYCHIC, BUG, ROCK, GHOST, DRAGON, DARK, STEEL, FAIRY, TYPE_COUNT
 };
 
@@ -31,7 +32,7 @@ static float TypeChart[TYPE_COUNT][TYPE_COUNT] = {
     /* STEEL   */ {1,0.5f,0.5f,0.5f,1,2,1,1,1,1,1,1,2,1,1,1,0.5f,2},
     /* FAIRY   */ {1,0.5f,1,1,1,1,2,0.5f,1,1,1,1,1,1,2,2,0.5f,1}
 };
-float GetEffectiveness(Type atk, Type def)
+inline float GetEffectiveness(Type atk, Type def)
 {
     return TypeChart[(int)atk][(int)def];
 }
