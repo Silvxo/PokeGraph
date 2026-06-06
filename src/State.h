@@ -1,5 +1,3 @@
-#pragma once
-
 #include "Pokemon.h"
 
 class State {
@@ -11,6 +9,12 @@ class State {
         this->p2 = p2;
         hp1 = 100;
         hp2 = 100;
+    }
+    State() {
+        p1 = nullptr;
+        p2 = nullptr;
+        hp1 = 0;
+        hp2 = 0;
     }
     State(Pokemon* p1, Pokemon* p2, int hp1, int hp2)
     {
@@ -55,7 +59,7 @@ class State {
 
             if (move2.name == "Recover") ApplyRecover(next.hp2, next.hp1);
             else                         ApplyMove(p2, p1, next.hp2, next.hp1, move2);
-        } 
+        }
         else {
             if (move2.name == "Recover") ApplyRecover(next.hp2, next.hp1);
             else                         ApplyMove(p2, p1, next.hp2, next.hp1, move2);
