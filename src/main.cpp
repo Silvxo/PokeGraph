@@ -1,61 +1,8 @@
 #include <iostream>
-#include <iostream>
-#include <fstream>
-#include <queue>
+#include <unordered_map>
 #include <vector>
-#include "State.h"
-#include "graph.h"
-
-void ExportToGraphViz(Graph& g, const std::string& filename) {
-    std::ofstream out(filename);
-    if (!out.is_open()) return;
-
-    out << "digraph G {\n";
-    out << "  node [shape=box, fontname=\"Arial\"];\n";
-
-    for (auto const& [id, node] : g.nodes) {
-        out << "  \"" << id << "\" [label=\""
-            << node.state.p1->name << " (" << node.state.hp1 << "%)\\n"
-            << node.state.p2->name << " (" << node.state.hp2 << "%)\"];\n";
-
-        for (auto const& edge : node.adj) {
-            out << "  \"" << id << "\" -> \"" << edge.next_state
-                << "\" [label=\"" << edge.atacks_used << "\"];\n";
-        }
-    }
-    out << "}\n";
-    out.close();
-}
-
-Graph SimulateCombat(Pokemon* p1, Pokemon* p2) {
-    State initialState(p1, p2);
-    Graph combatGraph(initialState);
-
-    std::queue<State> to_visit;
-    to_visit.push(initialState);
-
-    while (!to_visit.empty()) {
-        State current = to_visit.front();
-        to_visit.pop();
-
-        if (current.hp1 <= 0 || current.hp2 <= 0) continue;
-
-        for (size_t i = 0; i < current.p1->moves.size(); i++) {
-            for (size_t j = 0; j < current.p2->moves.size(); j++) {
-                State nextState = current.Step(i, j);
-                std::string nextId = nextState.Identity();
-
-                if (!combatGraph.nodes.count(nextId)) {
-                    combatGraph.AddEdge(current, i, j);
-                    to_visit.push(nextState);
-                } else {
-                    combatGraph.AddEdge(current, i, j);
-                }
-            }
-        }
-    }
-    return combatGraph;
-}
+#include "Tournament.h"
+#include "GraphViz.h"
 
 int main() {
     std::vector<Pokemon*> team1 = {
@@ -76,42 +23,40 @@ int main() {
         new Pokemon("Alakazam",  { PSYCHIC          },  55,  50,  45, 135,  95, 120, { PsychicMove,  Psystrike,   ShadowBall,  Recover })
     };
 
+    Tournament tournament(team1, team2);
+    auto results = tournament.getTournamentResults();
+
     int vitoriasTime1 = 0;
     int vitoriasTime2 = 0;
     std::unordered_map<std::string, int> vitoriasIndividuais;
 
-    std::cout << "Iniciando a simulacao dos 36 combates...\n\n";
+    std::cout << "Iniciando a simulacao dos " << results.size() << " combates...\n\n";
 
-    for (Pokemon* p1 : team1) {
-        for (Pokemon* p2 : team2) {
-            std::cout << "Simulando: " << p1->name << " vs " << p2->name << "...\n";
+    for (auto const& [battleName, graph] : results) {
+        std::cout << "Simulando: " << battleName << "...\n";
 
-            Graph resultado = SimulateCombat(p1, p2);
-
-            int p1Wins = 0, p2Wins = 0;
-            for (auto const& [id, node] : resultado.nodes) {
-                if (node.state.hp1 <= 0 && node.state.hp2 > 0) p2Wins++;
-                if (node.state.hp2 <= 0 && node.state.hp1 > 0) p1Wins++;
-            }
-
-            if (p1Wins > p2Wins) {
-                vitoriasTime1++;
-                vitoriasIndividuais[p1->name]++;
-            } else if (p2Wins > p1Wins) {
-                vitoriasTime2++;
-                vitoriasIndividuais[p2->name]++;
-            }
-
-            std::string filename = p1->name + "_vs_" + p2->name + ".dot";
-            ExportToGraphViz(resultado, filename);
+        int p1Wins = 0, p2Wins = 0;
+        for (auto const& [id, node] : graph.nodes) {
+            if (node.state.hp1 <= 0 && node.state.hp2 > 0) p2Wins++;
+            if (node.state.hp2 <= 0 && node.state.hp1 > 0) p1Wins++;
         }
+
+        if (p1Wins > p2Wins) {
+            vitoriasTime1++;
+            vitoriasIndividuais[graph.nodes.begin()->second.state.p1->name]++;
+        } else if (p2Wins > p1Wins) {
+            vitoriasTime2++;
+            vitoriasIndividuais[graph.nodes.begin()->second.state.p2->name]++;
+        }
+
+        ExportToGraphViz(graph, BattleNameToFilename(battleName));
     }
 
     std::cout << "\n=========================================\n";
     std::cout << "        RELATORIO DE META-GAME           \n";
     std::cout << "=========================================\n";
-    std::cout << "Vitórias totais do Time 1: " << vitoriasTime1 << "\n";
-    std::cout << "Vitórias totais do Time 2: " << vitoriasTime2 << "\n\n";
+    std::cout << "Vitorias totais do Time 1: " << vitoriasTime1 << "\n";
+    std::cout << "Vitorias totais do Time 2: " << vitoriasTime2 << "\n\n";
 
     if (vitoriasTime1 > vitoriasTime2) {
         std::cout << "-> O Time 1 tem a maior chance de vitoria!\n";

@@ -10,12 +10,6 @@ class State {
         hp1 = 100;
         hp2 = 100;
     }
-    State() {
-        p1 = nullptr;
-        p2 = nullptr;
-        hp1 = 0;
-        hp2 = 0;
-    }
     State(Pokemon* p1, Pokemon* p2, int hp1, int hp2)
     {
         this->p1 = p1;
