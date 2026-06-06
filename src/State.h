@@ -1,3 +1,5 @@
+#pragma once
+
 #include "Pokemon.h"
 
 class State {

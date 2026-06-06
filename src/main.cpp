@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "graph.h"
+#include "Tournament.h"
 
 
 int main()
@@ -26,8 +26,8 @@ int main()
         new Pokemon("Alakazam",  { PSYCHIC          },  55,  50,  45, 135,  95, 120, { PsychicMove,  Psystrike,   ShadowBall,  Recover })
     };
 
-    State initial(team1[0], team2[0]);
-    Graph graph(initial);
-    std::cout << graph.generate().size() << " nodes" << std::endl;
+    Tournament tournament(team1, team2);
+    auto results = tournament.getTournamentResults();
+    std::cout << results.size() << " battles" << std::endl;
     return 0;
 }

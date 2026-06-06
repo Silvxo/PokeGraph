@@ -1,3 +1,5 @@
+#pragma once
+
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
@@ -19,6 +21,8 @@ class Graph {
 
 public:
     std::unordered_map<std::string, Node> nodes;
+
+    Graph() = default;
 
     // Cria o grafo com State inicial
     Graph(State& initial_state){

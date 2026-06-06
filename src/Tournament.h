@@ -1,6 +1,7 @@
-#include "Pokemon.h"
+#include <string>
+#include <unordered_map>
+#include <vector>
 #include "graph.h"
-#include "battle.h"
 
 class Tournament{
     private:
@@ -11,18 +12,23 @@ class Tournament{
 
     public:
         Tournament(std::vector<Pokemon*> team1, std::vector<Pokemon*> team2){
-            this.team1 = team1;
-            this.team2 = team2;
+            this->team1 = team1;
+            this->team2 = team2;
         }
 
         std::unordered_map<std::string, Graph> getTournamentResults(){
-            for(Pokemon pokemonTeam1 : team1){
-                for(Pokemon pokemonTeam2 : team2){
+            for(int i = 0; i < team1.size() - 1; i++){
+                for(int j = i; j < team2.size(); j++){
                     //generateBattle
-                    Graph battle = new Graph(); 
-                    battles.insert({pokemonTeam1->name + " vs " + pokemonTeam2->name, battle.generate()});
+
+                    Pokemon* pk1 = team1[i];
+                    Pokemon* pk2 = team2[j];
+
+                    State initial(pk1, pk2);
+                    Graph battle(initial);
+                    battles.insert({pk1->name + " vs " + pk2->name, std::move(battle)});
                 }
             }
             return battles;
         }
-}
+};
