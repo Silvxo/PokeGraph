@@ -120,14 +120,14 @@ public:
                     interminaveis.push_back(pokemonTeam1->name + " vs " + pokemonTeam2->name);
                 } else if(pokemon1HasRecovery){
                     for(auto move : pokemonTeam2->moves){
-                        if(move.power < (pokemonTeam1->hp / 2)){
+                        if(CalculateDamage(*pokemonTeam1, *pokemonTeam2, move) < (pokemonTeam1->hp / 2)){
                             interminaveis.push_back(pokemonTeam1->name + " vs " + pokemonTeam2->name);
                             break;
                         }
                     }
                 } else if(pokemon2HasRecovery){
                     for(auto move : pokemonTeam1->moves){
-                        if(move.power < (pokemonTeam2->hp / 2)){
+                        if(CalculateDamage(*pokemonTeam2, *pokemonTeam1, move) < (pokemonTeam2->hp / 2)){
                             interminaveis.push_back(pokemonTeam1->name + " vs " + pokemonTeam2->name);
                             break;
                         }
