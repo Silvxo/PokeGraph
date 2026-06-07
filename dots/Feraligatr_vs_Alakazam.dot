@@ -1,0 +1,23 @@
+digraph G {
+  node [shape=box, fontname="Arial"];
+  "Feraligatr_100_Alakazam_0" [label="Feraligatr (100%)\nAlakazam (0%)"];
+  "Feraligatr_30_Alakazam_0" [label="Feraligatr (30%)\nAlakazam (0%)"];
+  "Feraligatr_0_Alakazam_100" [label="Feraligatr (0%)\nAlakazam (100%)"];
+  "Feraligatr_100_Alakazam_100" [label="Feraligatr (100%)\nAlakazam (100%)"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Liquidation | Psychic"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Liquidation | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_30_Alakazam_0" [label="Liquidation | Shadow Ball"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_100_Alakazam_0" [label="Liquidation | Recover"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Ice Punch | Psychic"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Ice Punch | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_30_Alakazam_0" [label="Ice Punch | Shadow Ball"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_100_Alakazam_0" [label="Ice Punch | Recover"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Crunch | Psychic"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Crunch | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_30_Alakazam_0" [label="Crunch | Shadow Ball"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_100_Alakazam_0" [label="Crunch | Recover"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Earthquake | Psychic"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Earthquake | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_30_Alakazam_0" [label="Earthquake | Shadow Ball"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_100_Alakazam_0" [label="Earthquake | Recover"];
+}

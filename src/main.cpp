@@ -3,6 +3,7 @@
 #include <vector>
 #include "Tournament.h"
 #include "GraphViz.h"
+#include "metaAnalyzer.h"
 
 int main() {
     std::vector<Pokemon*> team1 = {
@@ -26,51 +27,8 @@ int main() {
     Tournament tournament(team1, team2);
     auto results = tournament.getTournamentResults();
 
-    int vitoriasTime1 = 0;
-    int vitoriasTime2 = 0;
-    std::unordered_map<std::string, int> vitoriasIndividuais;
-
-    std::cout << "Iniciando a simulacao dos " << results.size() << " combates...\n\n";
-
-    for (auto const& [battleName, graph] : results) {
-        std::cout << "Simulando: " << battleName << "...\n";
-
-        int p1Wins = 0, p2Wins = 0;
-        for (auto const& [id, node] : graph.nodes) {
-            if (node.state.hp1 <= 0 && node.state.hp2 > 0) p2Wins++;
-            if (node.state.hp2 <= 0 && node.state.hp1 > 0) p1Wins++;
-        }
-
-        if (p1Wins > p2Wins) {
-            vitoriasTime1++;
-            vitoriasIndividuais[graph.nodes.begin()->second.state.p1->name]++;
-        } else if (p2Wins > p1Wins) {
-            vitoriasTime2++;
-            vitoriasIndividuais[graph.nodes.begin()->second.state.p2->name]++;
-        }
-
-        ExportToGraphViz(graph, BattleNameToFilename(battleName));
-    }
-
-    std::cout << "\n=========================================\n";
-    std::cout << "        RELATORIO DE META-GAME           \n";
-    std::cout << "=========================================\n";
-    std::cout << "Vitorias totais do Time 1: " << vitoriasTime1 << "\n";
-    std::cout << "Vitorias totais do Time 2: " << vitoriasTime2 << "\n\n";
-
-    if (vitoriasTime1 > vitoriasTime2) {
-        std::cout << "-> O Time 1 tem a maior chance de vitoria!\n";
-    } else if (vitoriasTime2 > vitoriasTime1) {
-        std::cout << "-> O Time 2 tem a maior chance de vitoria!\n";
-    } else {
-        std::cout << "-> Os times estao perfeitamente empatados!\n";
-    }
-
-    std::cout << "\nDesempenho Individual (Vitorias):\n";
-    for (auto const& [nome, vitorias] : vitoriasIndividuais) {
-        std::cout << " - " << nome << ": " << vitorias << " vitorias\n";
-    }
-    std::cout << "=========================================\n";
+    MetaAnalyzer metaAnalyzer = MetaAnalyzer(results, &team1, &team2);
+    metaAnalyzer.printMetaAnalyzerReport();
 
     for (Pokemon* p : team1) delete p;
     for (Pokemon* p : team2) delete p;
