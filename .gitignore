@@ -69,3 +69,8 @@ Testing/
 .cache/
 
 *.dot
+*.svg
+*.mp4
+*.png
+*.txt
+*.cpython*
