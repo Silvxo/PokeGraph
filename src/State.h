@@ -53,7 +53,7 @@ class State {
 
             if (move2.name == "Recover") ApplyRecover(next.hp2, next.hp1);
             else                         ApplyMove(p2, p1, next.hp2, next.hp1, move2);
-        } 
+        }
         else {
             if (move2.name == "Recover") ApplyRecover(next.hp2, next.hp1);
             else                         ApplyMove(p2, p1, next.hp2, next.hp1, move2);
