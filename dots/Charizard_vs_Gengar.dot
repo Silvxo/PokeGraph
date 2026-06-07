@@ -1,0 +1,21 @@
+digraph G {
+  node [shape=box, fontname="Arial"];
+  "Charizard_100_Gengar_0" [label="Charizard (100%)\nGengar (0%)"];
+  "Charizard_0_Gengar_100" [label="Charizard (0%)\nGengar (100%)"];
+  "Charizard_100_Gengar_100" [label="Charizard (100%)\nGengar (100%)"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Flamethrower | Shadow Ball"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Flamethrower | Sludge Bomb"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Flamethrower | Thunderbolt"];
+  "Charizard_100_Gengar_100" -> "Charizard_100_Gengar_0" [label="Flamethrower | Recover"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Hurricane | Shadow Ball"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Hurricane | Sludge Bomb"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Hurricane | Thunderbolt"];
+  "Charizard_100_Gengar_100" -> "Charizard_100_Gengar_0" [label="Hurricane | Recover"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Shadow Ball | Shadow Ball"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Shadow Ball | Sludge Bomb"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Shadow Ball | Thunderbolt"];
+  "Charizard_100_Gengar_100" -> "Charizard_100_Gengar_0" [label="Shadow Ball | Recover"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Recover | Shadow Ball"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Recover | Sludge Bomb"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Recover | Thunderbolt"];
+}
