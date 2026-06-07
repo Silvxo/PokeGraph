@@ -82,14 +82,20 @@ public:
         for(auto [battleName, battleGraph] : tournament){
             bool pokemon1AlwaysWins = true;
             bool pokemon2AlwaysWins = true;
+            std::string winnerName = "";
 
             for(auto [id, node] : battleGraph.nodes){
-                if(node.state.hp1 <= 0 && node.state.hp2 > 0) pokemon1AlwaysWins = false;
-                if(node.state.hp2 <= 0 && node.state.hp1 > 0) pokemon2AlwaysWins = false;
+                if(node.state.hp1 <= 0 && node.state.hp2 > 0) 
+                    winnerName = node.state.p2->name;
+                    pokemon1AlwaysWins = false;
+                if(node.state.hp2 <= 0 && node.state.hp1 > 0){
+                    winnerName = node.state.p1->name;
+                    pokemon2AlwaysWins = false;
+                }
                 if(!pokemon1AlwaysWins && !pokemon2AlwaysWins) break; // Se ambos já perderam, não precisa continuar verificando
             }
             if(pokemon1AlwaysWins || pokemon2AlwaysWins){
-                alwaysWinners.push_back(battleName);
+                alwaysWinners.push_back(battleName + " -> " + winnerName);
             }
         }        
         return alwaysWinners;
@@ -175,7 +181,7 @@ public:
         else if (bestTeam == team2) std::cout << "-> O Time 2 tem a maior chance de vitoria!\n";
         else std::cout << "-> Os times estao perfeitamente empatados!\n";
 
-        std::cout << "\nDesempenho Individual (Win Rate):\n";
+        std::cout << "\nMelhor(es) Pokemon(s):\n";
         auto bestPokemons = getPokemonComMelhorDesempenho();
         for(auto pokemon : bestPokemons){
             std::cout << " - " << pokemon->name << "\n";
@@ -186,7 +192,6 @@ public:
         for(auto battleName : alwaysWinners){
             std::cout << " - " << battleName << "\n";
         }
-
 
         std::cout << "\nBatalhas que Podem Ser Interminaveis:\n";
         auto interminaveis = getBatalhasQuePodemSerInterminaveis();
