@@ -26,6 +26,10 @@ int main() {
     Tournament tournament(team1, team2);
     auto results = tournament.getTournamentResults();
 
+     for (auto const& [battleName, graph] : results) {
+        ExportToGraphViz(graph, BattleNameToFilename(battleName));
+    }
+
     MetaAnalyzer metaAnalyzer = MetaAnalyzer(results, &team1, &team2);
     metaAnalyzer.printMetaAnalyzerReport();
 
