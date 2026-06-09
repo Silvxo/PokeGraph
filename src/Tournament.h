@@ -2,6 +2,7 @@
 #include <unordered_map>
 #include <vector>
 #include "graph.h"
+#include "GraphViz.h"
 
 class Tournament{
     private:

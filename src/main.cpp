@@ -2,7 +2,6 @@
 #include <unordered_map>
 #include <vector>
 #include "Tournament.h"
-#include "GraphViz.h"
 #include "metaAnalyzer.h"
 
 int main() {
@@ -26,6 +25,10 @@ int main() {
 
     Tournament tournament(team1, team2);
     auto results = tournament.getTournamentResults();
+
+     for (auto const& [battleName, graph] : results) {
+        ExportToGraphViz(graph, BattleNameToFilename(battleName));
+    }
 
     MetaAnalyzer metaAnalyzer = MetaAnalyzer(results, &team1, &team2);
     metaAnalyzer.printMetaAnalyzerReport();
