@@ -9,6 +9,7 @@ class Move {
     Category category;
     int power;
 
+
     Move(
         std::string name,
         Type type,
@@ -20,6 +21,9 @@ class Move {
         this->category = category;
         this->power = power;
     }
+
+
+
 };
 static Move Recover        ("Recover",      NORMAL, STATUS,   0);
 static Move BodySlam       ("Body Slam",    NORMAL, PHYSICAL,   85);

@@ -2,7 +2,6 @@
 #include <unordered_map>
 #include <vector>
 #include "Tournament.h"
-#include "GraphViz.h"
 #include "metaAnalyzer.h"
 
 int main() {

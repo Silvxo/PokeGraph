@@ -1,22 +1,3 @@
 digraph G {
   node [shape=box, fontname="Arial"];
-  "Feraligatr_100_Gengar_0" [label="Feraligatr (100%)\nGengar (0%)"];
-  "Feraligatr_0_Gengar_100" [label="Feraligatr (0%)\nGengar (100%)"];
-  "Feraligatr_100_Gengar_100" [label="Feraligatr (100%)\nGengar (100%)"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Liquidation | Shadow Ball"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Liquidation | Sludge Bomb"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Liquidation | Thunderbolt"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_100_Gengar_0" [label="Liquidation | Recover"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Ice Punch | Shadow Ball"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Ice Punch | Sludge Bomb"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Ice Punch | Thunderbolt"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_100_Gengar_0" [label="Ice Punch | Recover"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Crunch | Shadow Ball"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Crunch | Sludge Bomb"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Crunch | Thunderbolt"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_100_Gengar_0" [label="Crunch | Recover"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Earthquake | Shadow Ball"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Earthquake | Sludge Bomb"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_0_Gengar_100" [label="Earthquake | Thunderbolt"];
-  "Feraligatr_100_Gengar_100" -> "Feraligatr_100_Gengar_0" [label="Earthquake | Recover"];
 }

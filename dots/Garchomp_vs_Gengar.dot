@@ -1,24 +1,3 @@
 digraph G {
   node [shape=box, fontname="Arial"];
-  "Garchomp_100_Gengar_0" [label="Garchomp (100%)\nGengar (0%)"];
-  "Garchomp_90_Gengar_0" [label="Garchomp (90%)\nGengar (0%)"];
-  "Garchomp_20_Gengar_0" [label="Garchomp (20%)\nGengar (0%)"];
-  "Garchomp_50_Gengar_0" [label="Garchomp (50%)\nGengar (0%)"];
-  "Garchomp_100_Gengar_100" [label="Garchomp (100%)\nGengar (100%)"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Earthquake | Shadow Ball"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Earthquake | Sludge Bomb"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_90_Gengar_0" [label="Earthquake | Thunderbolt"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_100_Gengar_0" [label="Earthquake | Recover"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Dragon Claw | Shadow Ball"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Dragon Claw | Sludge Bomb"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_90_Gengar_0" [label="Dragon Claw | Thunderbolt"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_100_Gengar_0" [label="Dragon Claw | Recover"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Crunch | Shadow Ball"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Crunch | Sludge Bomb"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_90_Gengar_0" [label="Crunch | Thunderbolt"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_100_Gengar_0" [label="Crunch | Recover"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Fire Punch | Shadow Ball"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Fire Punch | Sludge Bomb"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_90_Gengar_0" [label="Fire Punch | Thunderbolt"];
-  "Garchomp_100_Gengar_100" -> "Garchomp_100_Gengar_0" [label="Fire Punch | Recover"];
 }
