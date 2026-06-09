@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Feraligatr_0_Alakazam_100" [label="Feraligatr (0%)\nAlakazam (100%)"];
+  "Feraligatr_100_Alakazam_100" [label="Feraligatr (100%)\nAlakazam (100%)"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Crunch | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Crunch | Psychic"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Liquidation | Psystrike"];
+  "Feraligatr_100_Alakazam_100" -> "Feraligatr_0_Alakazam_100" [label="Liquidation | Psychic"];
 }

@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_0_Blaziken_100" [label="Decidueye (0%)\nBlaziken (100%)"];
+  "Decidueye_100_Blaziken_100" [label="Decidueye (100%)\nBlaziken (100%)"];
+  "Decidueye_100_Blaziken_100" -> "Decidueye_0_Blaziken_100" [label="Shadow Claw | Fire Punch"];
+  "Decidueye_100_Blaziken_100" -> "Decidueye_0_Blaziken_100" [label="Shadow Claw | Flamethrower"];
+  "Decidueye_100_Blaziken_100" -> "Decidueye_0_Blaziken_100" [label="Energy Ball | Fire Punch"];
+  "Decidueye_100_Blaziken_100" -> "Decidueye_0_Blaziken_100" [label="Energy Ball | Flamethrower"];
 }

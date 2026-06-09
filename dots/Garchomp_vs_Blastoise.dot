@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Garchomp_100_Blastoise_0" [label="Garchomp (100%)\nBlastoise (0%)"];
+  "Garchomp_100_Blastoise_100" [label="Garchomp (100%)\nBlastoise (100%)"];
+  "Garchomp_100_Blastoise_100" -> "Garchomp_100_Blastoise_0" [label="Earthquake | Ice Beam"];
+  "Garchomp_100_Blastoise_100" -> "Garchomp_100_Blastoise_0" [label="Earthquake | Hydro Pump"];
+  "Garchomp_100_Blastoise_100" -> "Garchomp_100_Blastoise_0" [label="Dragon Claw | Ice Beam"];
+  "Garchomp_100_Blastoise_100" -> "Garchomp_100_Blastoise_0" [label="Dragon Claw | Hydro Pump"];
 }

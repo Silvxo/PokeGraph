@@ -1,3 +1,16 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Garchomp_20_Tyranitar_0" [label="Garchomp (20%)\nTyranitar (0%)"];
+  "Garchomp_20_Tyranitar_30" [label="Garchomp (20%)\nTyranitar (30%)"];
+  "Garchomp_20_Tyranitar_30" -> "Garchomp_20_Tyranitar_0" [label="Earthquake | Ice Punch"];
+  "Garchomp_20_Tyranitar_30" -> "Garchomp_20_Tyranitar_0" [label="Earthquake | Crunch"];
+  "Garchomp_20_Tyranitar_30" -> "Garchomp_20_Tyranitar_0" [label="Dragon Claw | Ice Punch"];
+  "Garchomp_20_Tyranitar_30" -> "Garchomp_20_Tyranitar_0" [label="Dragon Claw | Crunch"];
+  "Garchomp_0_Tyranitar_30" [label="Garchomp (0%)\nTyranitar (30%)"];
+  "Garchomp_100_Tyranitar_0" [label="Garchomp (100%)\nTyranitar (0%)"];
+  "Garchomp_100_Tyranitar_100" [label="Garchomp (100%)\nTyranitar (100%)"];
+  "Garchomp_100_Tyranitar_100" -> "Garchomp_100_Tyranitar_0" [label="Earthquake | Ice Punch"];
+  "Garchomp_100_Tyranitar_100" -> "Garchomp_100_Tyranitar_0" [label="Earthquake | Crunch"];
+  "Garchomp_100_Tyranitar_100" -> "Garchomp_0_Tyranitar_30" [label="Dragon Claw | Ice Punch"];
+  "Garchomp_100_Tyranitar_100" -> "Garchomp_20_Tyranitar_30" [label="Dragon Claw | Crunch"];
 }

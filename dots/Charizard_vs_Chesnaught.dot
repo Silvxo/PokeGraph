@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_100_Chesnaught_0" [label="Charizard (100%)\nChesnaught (0%)"];
+  "Charizard_100_Chesnaught_100" [label="Charizard (100%)\nChesnaught (100%)"];
+  "Charizard_100_Chesnaught_100" -> "Charizard_100_Chesnaught_0" [label="Hurricane | Close Combat"];
+  "Charizard_100_Chesnaught_100" -> "Charizard_100_Chesnaught_0" [label="Hurricane | Recover"];
+  "Charizard_100_Chesnaught_100" -> "Charizard_100_Chesnaught_0" [label="Flamethrower | Close Combat"];
+  "Charizard_100_Chesnaught_100" -> "Charizard_100_Chesnaught_0" [label="Flamethrower | Recover"];
 }

@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Reuniclus_20_Chesnaught_0" [label="Reuniclus (20%)\nChesnaught (0%)"];
+  "Reuniclus_40_Chesnaught_0" [label="Reuniclus (40%)\nChesnaught (0%)"];
+  "Reuniclus_100_Chesnaught_100" [label="Reuniclus (100%)\nChesnaught (100%)"];
+  "Reuniclus_100_Chesnaught_100" -> "Reuniclus_20_Chesnaught_0" [label="Psystrike | Leaf Blade"];
+  "Reuniclus_100_Chesnaught_100" -> "Reuniclus_40_Chesnaught_0" [label="Psystrike | Earthquake"];
+  "Reuniclus_100_Chesnaught_100" -> "Reuniclus_20_Chesnaught_0" [label="Psychic | Leaf Blade"];
+  "Reuniclus_100_Chesnaught_100" -> "Reuniclus_40_Chesnaught_0" [label="Psychic | Earthquake"];
 }

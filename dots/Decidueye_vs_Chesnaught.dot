@@ -1,3 +1,20 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_50_Chesnaught_50" [label="Decidueye (50%)\nChesnaught (50%)"];
+  "Decidueye_50_Chesnaught_50" -> "Decidueye_50_Chesnaught_0" [label="Shadow Claw | Leaf Blade"];
+  "Decidueye_50_Chesnaught_50" -> "Decidueye_50_Chesnaught_0" [label="Shadow Claw | Earthquake"];
+  "Decidueye_50_Chesnaught_50" -> "Decidueye_50_Chesnaught_0" [label="Energy Ball | Leaf Blade"];
+  "Decidueye_50_Chesnaught_50" -> "Decidueye_50_Chesnaught_0" [label="Energy Ball | Earthquake"];
+  "Decidueye_40_Chesnaught_0" [label="Decidueye (40%)\nChesnaught (0%)"];
+  "Decidueye_40_Chesnaught_50" [label="Decidueye (40%)\nChesnaught (50%)"];
+  "Decidueye_40_Chesnaught_50" -> "Decidueye_40_Chesnaught_0" [label="Shadow Claw | Leaf Blade"];
+  "Decidueye_40_Chesnaught_50" -> "Decidueye_40_Chesnaught_0" [label="Shadow Claw | Earthquake"];
+  "Decidueye_40_Chesnaught_50" -> "Decidueye_40_Chesnaught_0" [label="Energy Ball | Leaf Blade"];
+  "Decidueye_40_Chesnaught_50" -> "Decidueye_40_Chesnaught_0" [label="Energy Ball | Earthquake"];
+  "Decidueye_50_Chesnaught_0" [label="Decidueye (50%)\nChesnaught (0%)"];
+  "Decidueye_100_Chesnaught_100" [label="Decidueye (100%)\nChesnaught (100%)"];
+  "Decidueye_100_Chesnaught_100" -> "Decidueye_40_Chesnaught_50" [label="Shadow Claw | Leaf Blade"];
+  "Decidueye_100_Chesnaught_100" -> "Decidueye_50_Chesnaught_50" [label="Shadow Claw | Earthquake"];
+  "Decidueye_100_Chesnaught_100" -> "Decidueye_40_Chesnaught_50" [label="Energy Ball | Leaf Blade"];
+  "Decidueye_100_Chesnaught_100" -> "Decidueye_50_Chesnaught_50" [label="Energy Ball | Earthquake"];
 }

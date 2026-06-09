@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_10_Alakazam_0" [label="Scizor (10%)\nAlakazam (0%)"];
+  "Scizor_100_Alakazam_100" [label="Scizor (100%)\nAlakazam (100%)"];
+  "Scizor_100_Alakazam_100" -> "Scizor_10_Alakazam_0" [label="Iron Head | Psystrike"];
+  "Scizor_100_Alakazam_100" -> "Scizor_10_Alakazam_0" [label="Iron Head | Shadow Ball"];
+  "Scizor_100_Alakazam_100" -> "Scizor_10_Alakazam_0" [label="Metal Claw | Psystrike"];
+  "Scizor_100_Alakazam_100" -> "Scizor_10_Alakazam_0" [label="Metal Claw | Shadow Ball"];
 }

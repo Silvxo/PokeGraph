@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_0_Alakazam_100" [label="Decidueye (0%)\nAlakazam (100%)"];
+  "Decidueye_100_Alakazam_100" [label="Decidueye (100%)\nAlakazam (100%)"];
+  "Decidueye_100_Alakazam_100" -> "Decidueye_0_Alakazam_100" [label="Shadow Claw | Shadow Ball"];
+  "Decidueye_100_Alakazam_100" -> "Decidueye_0_Alakazam_100" [label="Shadow Claw | Psystrike"];
+  "Decidueye_100_Alakazam_100" -> "Decidueye_0_Alakazam_100" [label="Leaf Blade | Shadow Ball"];
+  "Decidueye_100_Alakazam_100" -> "Decidueye_0_Alakazam_100" [label="Leaf Blade | Psystrike"];
 }

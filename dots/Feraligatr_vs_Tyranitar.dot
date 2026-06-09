@@ -1,3 +1,15 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Feraligatr_10_Tyranitar_0" [label="Feraligatr (10%)\nTyranitar (0%)"];
+  "Feraligatr_10_Tyranitar_10" [label="Feraligatr (10%)\nTyranitar (10%)"];
+  "Feraligatr_10_Tyranitar_10" -> "Feraligatr_10_Tyranitar_0" [label="Liquidation | Crunch"];
+  "Feraligatr_10_Tyranitar_10" -> "Feraligatr_10_Tyranitar_0" [label="Liquidation | Rock Slide"];
+  "Feraligatr_10_Tyranitar_10" -> "Feraligatr_10_Tyranitar_0" [label="Earthquake | Crunch"];
+  "Feraligatr_10_Tyranitar_10" -> "Feraligatr_10_Tyranitar_0" [label="Earthquake | Rock Slide"];
+  "Feraligatr_100_Tyranitar_0" [label="Feraligatr (100%)\nTyranitar (0%)"];
+  "Feraligatr_100_Tyranitar_100" [label="Feraligatr (100%)\nTyranitar (100%)"];
+  "Feraligatr_100_Tyranitar_100" -> "Feraligatr_100_Tyranitar_0" [label="Liquidation | Crunch"];
+  "Feraligatr_100_Tyranitar_100" -> "Feraligatr_100_Tyranitar_0" [label="Liquidation | Rock Slide"];
+  "Feraligatr_100_Tyranitar_100" -> "Feraligatr_10_Tyranitar_10" [label="Earthquake | Crunch"];
+  "Feraligatr_100_Tyranitar_100" -> "Feraligatr_10_Tyranitar_10" [label="Earthquake | Rock Slide"];
 }

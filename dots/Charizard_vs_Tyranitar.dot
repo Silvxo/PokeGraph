@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_0_Tyranitar_100" [label="Charizard (0%)\nTyranitar (100%)"];
+  "Charizard_0_Tyranitar_50" [label="Charizard (0%)\nTyranitar (50%)"];
+  "Charizard_100_Tyranitar_100" [label="Charizard (100%)\nTyranitar (100%)"];
+  "Charizard_100_Tyranitar_100" -> "Charizard_0_Tyranitar_50" [label="Hurricane | Rock Slide"];
+  "Charizard_100_Tyranitar_100" -> "Charizard_0_Tyranitar_50" [label="Hurricane | Crunch"];
+  "Charizard_100_Tyranitar_100" -> "Charizard_0_Tyranitar_100" [label="Recover | Rock Slide"];
+  "Charizard_100_Tyranitar_100" -> "Charizard_0_Tyranitar_100" [label="Recover | Crunch"];
 }

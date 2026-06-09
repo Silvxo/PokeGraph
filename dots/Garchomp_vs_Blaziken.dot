@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Garchomp_100_Blaziken_0" [label="Garchomp (100%)\nBlaziken (0%)"];
+  "Garchomp_100_Blaziken_100" [label="Garchomp (100%)\nBlaziken (100%)"];
+  "Garchomp_100_Blaziken_100" -> "Garchomp_100_Blaziken_0" [label="Earthquake | Close Combat"];
+  "Garchomp_100_Blaziken_100" -> "Garchomp_100_Blaziken_0" [label="Earthquake | Fire Punch"];
+  "Garchomp_100_Blaziken_100" -> "Garchomp_100_Blaziken_0" [label="Dragon Claw | Close Combat"];
+  "Garchomp_100_Blaziken_100" -> "Garchomp_100_Blaziken_0" [label="Dragon Claw | Fire Punch"];
 }

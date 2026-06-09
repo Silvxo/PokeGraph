@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Reuniclus_100_Blastoise_0" [label="Reuniclus (100%)\nBlastoise (0%)"];
+  "Reuniclus_30_Blastoise_0" [label="Reuniclus (30%)\nBlastoise (0%)"];
+  "Reuniclus_100_Blastoise_100" [label="Reuniclus (100%)\nBlastoise (100%)"];
+  "Reuniclus_100_Blastoise_100" -> "Reuniclus_30_Blastoise_0" [label="Psystrike | Hydro Pump"];
+  "Reuniclus_100_Blastoise_100" -> "Reuniclus_100_Blastoise_0" [label="Psystrike | Recover"];
+  "Reuniclus_100_Blastoise_100" -> "Reuniclus_30_Blastoise_0" [label="Psychic | Hydro Pump"];
+  "Reuniclus_100_Blastoise_100" -> "Reuniclus_100_Blastoise_0" [label="Psychic | Recover"];
 }

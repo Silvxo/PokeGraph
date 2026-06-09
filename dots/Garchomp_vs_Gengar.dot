@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Garchomp_20_Gengar_0" [label="Garchomp (20%)\nGengar (0%)"];
+  "Garchomp_50_Gengar_0" [label="Garchomp (50%)\nGengar (0%)"];
+  "Garchomp_100_Gengar_100" [label="Garchomp (100%)\nGengar (100%)"];
+  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Earthquake | Shadow Ball"];
+  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Earthquake | Sludge Bomb"];
+  "Garchomp_100_Gengar_100" -> "Garchomp_20_Gengar_0" [label="Crunch | Shadow Ball"];
+  "Garchomp_100_Gengar_100" -> "Garchomp_50_Gengar_0" [label="Crunch | Sludge Bomb"];
 }

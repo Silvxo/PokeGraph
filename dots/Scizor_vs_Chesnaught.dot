@@ -1,3 +1,21 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_20_Chesnaught_40" [label="Scizor (20%)\nChesnaught (40%)"];
+  "Scizor_20_Chesnaught_40" -> "Scizor_20_Chesnaught_0" [label="Iron Head | Close Combat"];
+  "Scizor_20_Chesnaught_40" -> "Scizor_20_Chesnaught_0" [label="Iron Head | Earthquake"];
+  "Scizor_20_Chesnaught_40" -> "Scizor_20_Chesnaught_0" [label="Bug Buzz | Close Combat"];
+  "Scizor_20_Chesnaught_40" -> "Scizor_20_Chesnaught_0" [label="Bug Buzz | Earthquake"];
+  "Scizor_0_Chesnaught_40" [label="Scizor (0%)\nChesnaught (40%)"];
+  "Scizor_20_Chesnaught_30" [label="Scizor (20%)\nChesnaught (30%)"];
+  "Scizor_20_Chesnaught_30" -> "Scizor_20_Chesnaught_0" [label="Iron Head | Close Combat"];
+  "Scizor_20_Chesnaught_30" -> "Scizor_20_Chesnaught_0" [label="Iron Head | Earthquake"];
+  "Scizor_20_Chesnaught_30" -> "Scizor_20_Chesnaught_0" [label="Bug Buzz | Close Combat"];
+  "Scizor_20_Chesnaught_30" -> "Scizor_20_Chesnaught_0" [label="Bug Buzz | Earthquake"];
+  "Scizor_20_Chesnaught_0" [label="Scizor (20%)\nChesnaught (0%)"];
+  "Scizor_0_Chesnaught_30" [label="Scizor (0%)\nChesnaught (30%)"];
+  "Scizor_100_Chesnaught_100" [label="Scizor (100%)\nChesnaught (100%)"];
+  "Scizor_100_Chesnaught_100" -> "Scizor_0_Chesnaught_30" [label="Iron Head | Close Combat"];
+  "Scizor_100_Chesnaught_100" -> "Scizor_20_Chesnaught_30" [label="Iron Head | Earthquake"];
+  "Scizor_100_Chesnaught_100" -> "Scizor_0_Chesnaught_40" [label="Bug Buzz | Close Combat"];
+  "Scizor_100_Chesnaught_100" -> "Scizor_20_Chesnaught_40" [label="Bug Buzz | Earthquake"];
 }

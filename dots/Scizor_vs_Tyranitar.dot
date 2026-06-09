@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_0_Tyranitar_10" [label="Scizor (0%)\nTyranitar (10%)"];
+  "Scizor_100_Tyranitar_0" [label="Scizor (100%)\nTyranitar (0%)"];
+  "Scizor_100_Tyranitar_100" [label="Scizor (100%)\nTyranitar (100%)"];
+  "Scizor_100_Tyranitar_100" -> "Scizor_100_Tyranitar_0" [label="Iron Head | Crunch"];
+  "Scizor_100_Tyranitar_100" -> "Scizor_100_Tyranitar_0" [label="Iron Head | Rock Slide"];
+  "Scizor_100_Tyranitar_100" -> "Scizor_0_Tyranitar_10" [label="Metal Claw | Crunch"];
+  "Scizor_100_Tyranitar_100" -> "Scizor_0_Tyranitar_10" [label="Metal Claw | Rock Slide"];
 }

@@ -25,7 +25,6 @@ class Tournament{
                     Graph battle(initial);
                     
                     battles.insert({pk1->name + " vs " + pk2->name, std::move(battle)});
-                    ExportToGraphViz(battlenodes, BattleNameToFilename(pk1->name + " vs " + pk2->name));
                 }
             }
             return battles;

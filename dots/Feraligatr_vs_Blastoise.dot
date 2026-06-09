@@ -1,3 +1,19 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Feraligatr_50_Blastoise_50" [label="Feraligatr (50%)\nBlastoise (50%)"];
+  "Feraligatr_50_Blastoise_50" -> "Feraligatr_50_Blastoise_0" [label="Earthquake | Hydro Pump"];
+  "Feraligatr_50_Blastoise_50" -> "Feraligatr_50_Blastoise_0" [label="Earthquake | Aura Sphere"];
+  "Feraligatr_50_Blastoise_50" -> "Feraligatr_50_Blastoise_0" [label="Crunch | Hydro Pump"];
+  "Feraligatr_50_Blastoise_50" -> "Feraligatr_50_Blastoise_0" [label="Crunch | Aura Sphere"];
+  "Feraligatr_50_Blastoise_0" [label="Feraligatr (50%)\nBlastoise (0%)"];
+  "Feraligatr_50_Blastoise_30" [label="Feraligatr (50%)\nBlastoise (30%)"];
+  "Feraligatr_50_Blastoise_30" -> "Feraligatr_50_Blastoise_0" [label="Earthquake | Hydro Pump"];
+  "Feraligatr_50_Blastoise_30" -> "Feraligatr_50_Blastoise_0" [label="Earthquake | Aura Sphere"];
+  "Feraligatr_50_Blastoise_30" -> "Feraligatr_50_Blastoise_0" [label="Crunch | Hydro Pump"];
+  "Feraligatr_50_Blastoise_30" -> "Feraligatr_50_Blastoise_0" [label="Crunch | Aura Sphere"];
+  "Feraligatr_100_Blastoise_100" [label="Feraligatr (100%)\nBlastoise (100%)"];
+  "Feraligatr_100_Blastoise_100" -> "Feraligatr_50_Blastoise_30" [label="Earthquake | Hydro Pump"];
+  "Feraligatr_100_Blastoise_100" -> "Feraligatr_50_Blastoise_30" [label="Earthquake | Aura Sphere"];
+  "Feraligatr_100_Blastoise_100" -> "Feraligatr_50_Blastoise_50" [label="Crunch | Hydro Pump"];
+  "Feraligatr_100_Blastoise_100" -> "Feraligatr_50_Blastoise_50" [label="Crunch | Aura Sphere"];
 }

@@ -1,3 +1,16 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_10_Blaziken_20" [label="Charizard (10%)\nBlaziken (20%)"];
+  "Charizard_10_Blaziken_20" -> "Charizard_10_Blaziken_0" [label="Hurricane | Thunder Punch"];
+  "Charizard_10_Blaziken_20" -> "Charizard_10_Blaziken_0" [label="Hurricane | Close Combat"];
+  "Charizard_10_Blaziken_20" -> "Charizard_10_Blaziken_0" [label="Shadow Ball | Thunder Punch"];
+  "Charizard_10_Blaziken_20" -> "Charizard_10_Blaziken_0" [label="Shadow Ball | Close Combat"];
+  "Charizard_0_Blaziken_20" [label="Charizard (0%)\nBlaziken (20%)"];
+  "Charizard_10_Blaziken_0" [label="Charizard (10%)\nBlaziken (0%)"];
+  "Charizard_100_Blaziken_0" [label="Charizard (100%)\nBlaziken (0%)"];
+  "Charizard_100_Blaziken_100" [label="Charizard (100%)\nBlaziken (100%)"];
+  "Charizard_100_Blaziken_100" -> "Charizard_100_Blaziken_0" [label="Hurricane | Thunder Punch"];
+  "Charizard_100_Blaziken_100" -> "Charizard_100_Blaziken_0" [label="Hurricane | Close Combat"];
+  "Charizard_100_Blaziken_100" -> "Charizard_0_Blaziken_20" [label="Shadow Ball | Thunder Punch"];
+  "Charizard_100_Blaziken_100" -> "Charizard_10_Blaziken_20" [label="Shadow Ball | Close Combat"];
 }

@@ -1,3 +1,15 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_0_Blastoise_50" [label="Scizor (0%)\nBlastoise (50%)"];
+  "Scizor_40_Blastoise_50" [label="Scizor (40%)\nBlastoise (50%)"];
+  "Scizor_40_Blastoise_50" -> "Scizor_0_Blastoise_50" [label="Iron Head | Hydro Pump"];
+  "Scizor_40_Blastoise_50" -> "Scizor_0_Blastoise_50" [label="Iron Head | Aura Sphere"];
+  "Scizor_40_Blastoise_50" -> "Scizor_0_Blastoise_50" [label="Bug Buzz | Hydro Pump"];
+  "Scizor_40_Blastoise_50" -> "Scizor_0_Blastoise_50" [label="Bug Buzz | Aura Sphere"];
+  "Scizor_0_Blastoise_100" [label="Scizor (0%)\nBlastoise (100%)"];
+  "Scizor_100_Blastoise_100" [label="Scizor (100%)\nBlastoise (100%)"];
+  "Scizor_100_Blastoise_100" -> "Scizor_0_Blastoise_100" [label="Iron Head | Hydro Pump"];
+  "Scizor_100_Blastoise_100" -> "Scizor_40_Blastoise_50" [label="Iron Head | Aura Sphere"];
+  "Scizor_100_Blastoise_100" -> "Scizor_0_Blastoise_100" [label="Bug Buzz | Hydro Pump"];
+  "Scizor_100_Blastoise_100" -> "Scizor_40_Blastoise_50" [label="Bug Buzz | Aura Sphere"];
 }

@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_0_Blaziken_100" [label="Scizor (0%)\nBlaziken (100%)"];
+  "Scizor_100_Blaziken_100" [label="Scizor (100%)\nBlaziken (100%)"];
+  "Scizor_100_Blaziken_100" -> "Scizor_0_Blaziken_100" [label="Iron Head | Flamethrower"];
+  "Scizor_100_Blaziken_100" -> "Scizor_0_Blaziken_100" [label="Iron Head | Fire Punch"];
+  "Scizor_100_Blaziken_100" -> "Scizor_0_Blaziken_100" [label="Metal Claw | Flamethrower"];
+  "Scizor_100_Blaziken_100" -> "Scizor_0_Blaziken_100" [label="Metal Claw | Fire Punch"];
 }

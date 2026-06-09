@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_0_Gengar_100" [label="Decidueye (0%)\nGengar (100%)"];
+  "Decidueye_100_Gengar_100" [label="Decidueye (100%)\nGengar (100%)"];
+  "Decidueye_100_Gengar_100" -> "Decidueye_0_Gengar_100" [label="Shadow Claw | Shadow Ball"];
+  "Decidueye_100_Gengar_100" -> "Decidueye_0_Gengar_100" [label="Shadow Claw | Sludge Bomb"];
+  "Decidueye_100_Gengar_100" -> "Decidueye_0_Gengar_100" [label="Leaf Blade | Shadow Ball"];
+  "Decidueye_100_Gengar_100" -> "Decidueye_0_Gengar_100" [label="Leaf Blade | Sludge Bomb"];
 }

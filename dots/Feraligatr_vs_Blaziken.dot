@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Feraligatr_0_Blaziken_100" [label="Feraligatr (0%)\nBlaziken (100%)"];
+  "Feraligatr_100_Blaziken_100" [label="Feraligatr (100%)\nBlaziken (100%)"];
+  "Feraligatr_100_Blaziken_100" -> "Feraligatr_0_Blaziken_100" [label="Liquidation | Close Combat"];
+  "Feraligatr_100_Blaziken_100" -> "Feraligatr_0_Blaziken_100" [label="Liquidation | Thunder Punch"];
+  "Feraligatr_100_Blaziken_100" -> "Feraligatr_0_Blaziken_100" [label="Earthquake | Close Combat"];
+  "Feraligatr_100_Blaziken_100" -> "Feraligatr_0_Blaziken_100" [label="Earthquake | Thunder Punch"];
 }

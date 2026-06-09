@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Scizor_0_Gengar_100" [label="Scizor (0%)\nGengar (100%)"];
+  "Scizor_100_Gengar_100" [label="Scizor (100%)\nGengar (100%)"];
+  "Scizor_100_Gengar_100" -> "Scizor_0_Gengar_100" [label="Iron Head | Shadow Ball"];
+  "Scizor_100_Gengar_100" -> "Scizor_0_Gengar_100" [label="Iron Head | Thunderbolt"];
+  "Scizor_100_Gengar_100" -> "Scizor_0_Gengar_100" [label="Metal Claw | Shadow Ball"];
+  "Scizor_100_Gengar_100" -> "Scizor_0_Gengar_100" [label="Metal Claw | Thunderbolt"];
 }

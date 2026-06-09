@@ -1,3 +1,16 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_40_Blastoise_0" [label="Charizard (40%)\nBlastoise (0%)"];
+  "Charizard_40_Blastoise_50" [label="Charizard (40%)\nBlastoise (50%)"];
+  "Charizard_40_Blastoise_50" -> "Charizard_40_Blastoise_0" [label="Hurricane | Hydro Pump"];
+  "Charizard_40_Blastoise_50" -> "Charizard_40_Blastoise_0" [label="Hurricane | Ice Beam"];
+  "Charizard_40_Blastoise_50" -> "Charizard_40_Blastoise_0" [label="Shadow Ball | Hydro Pump"];
+  "Charizard_40_Blastoise_50" -> "Charizard_40_Blastoise_0" [label="Shadow Ball | Ice Beam"];
+  "Charizard_0_Blastoise_50" [label="Charizard (0%)\nBlastoise (50%)"];
+  "Charizard_100_Blastoise_0" [label="Charizard (100%)\nBlastoise (0%)"];
+  "Charizard_100_Blastoise_100" [label="Charizard (100%)\nBlastoise (100%)"];
+  "Charizard_100_Blastoise_100" -> "Charizard_100_Blastoise_0" [label="Hurricane | Hydro Pump"];
+  "Charizard_100_Blastoise_100" -> "Charizard_100_Blastoise_0" [label="Hurricane | Ice Beam"];
+  "Charizard_100_Blastoise_100" -> "Charizard_0_Blastoise_50" [label="Shadow Ball | Hydro Pump"];
+  "Charizard_100_Blastoise_100" -> "Charizard_40_Blastoise_50" [label="Shadow Ball | Ice Beam"];
 }

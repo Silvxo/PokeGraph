@@ -1,3 +1,20 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Reuniclus_60_Tyranitar_100" [label="Reuniclus (60%)\nTyranitar (100%)"];
+  "Reuniclus_60_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Shadow Ball | Crunch"];
+  "Reuniclus_60_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Shadow Ball | Rock Slide"];
+  "Reuniclus_60_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Recover | Crunch"];
+  "Reuniclus_60_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Recover | Rock Slide"];
+  "Reuniclus_0_Tyranitar_70" [label="Reuniclus (0%)\nTyranitar (70%)"];
+  "Reuniclus_10_Tyranitar_70" [label="Reuniclus (10%)\nTyranitar (70%)"];
+  "Reuniclus_10_Tyranitar_70" -> "Reuniclus_0_Tyranitar_70" [label="Shadow Ball | Crunch"];
+  "Reuniclus_10_Tyranitar_70" -> "Reuniclus_0_Tyranitar_70" [label="Shadow Ball | Rock Slide"];
+  "Reuniclus_10_Tyranitar_70" -> "Reuniclus_0_Tyranitar_70" [label="Recover | Crunch"];
+  "Reuniclus_10_Tyranitar_70" -> "Reuniclus_0_Tyranitar_70" [label="Recover | Rock Slide"];
+  "Reuniclus_0_Tyranitar_100" [label="Reuniclus (0%)\nTyranitar (100%)"];
+  "Reuniclus_100_Tyranitar_100" [label="Reuniclus (100%)\nTyranitar (100%)"];
+  "Reuniclus_100_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Shadow Ball | Crunch"];
+  "Reuniclus_100_Tyranitar_100" -> "Reuniclus_10_Tyranitar_70" [label="Shadow Ball | Rock Slide"];
+  "Reuniclus_100_Tyranitar_100" -> "Reuniclus_0_Tyranitar_100" [label="Recover | Crunch"];
+  "Reuniclus_100_Tyranitar_100" -> "Reuniclus_60_Tyranitar_100" [label="Recover | Rock Slide"];
 }

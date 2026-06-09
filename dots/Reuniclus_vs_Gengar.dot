@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Reuniclus_10_Gengar_0" [label="Reuniclus (10%)\nGengar (0%)"];
+  "Reuniclus_0_Gengar_100" [label="Reuniclus (0%)\nGengar (100%)"];
+  "Reuniclus_100_Gengar_100" [label="Reuniclus (100%)\nGengar (100%)"];
+  "Reuniclus_100_Gengar_100" -> "Reuniclus_0_Gengar_100" [label="Psystrike | Shadow Ball"];
+  "Reuniclus_100_Gengar_100" -> "Reuniclus_10_Gengar_0" [label="Psystrike | Sludge Bomb"];
+  "Reuniclus_100_Gengar_100" -> "Reuniclus_0_Gengar_100" [label="Psychic | Shadow Ball"];
+  "Reuniclus_100_Gengar_100" -> "Reuniclus_10_Gengar_0" [label="Psychic | Sludge Bomb"];
 }

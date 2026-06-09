@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Reuniclus_20_Blaziken_0" [label="Reuniclus (20%)\nBlaziken (0%)"];
+  "Reuniclus_100_Blaziken_100" [label="Reuniclus (100%)\nBlaziken (100%)"];
+  "Reuniclus_100_Blaziken_100" -> "Reuniclus_20_Blaziken_0" [label="Psystrike | Flamethrower"];
+  "Reuniclus_100_Blaziken_100" -> "Reuniclus_20_Blaziken_0" [label="Psystrike | Fire Punch"];
+  "Reuniclus_100_Blaziken_100" -> "Reuniclus_20_Blaziken_0" [label="Psychic | Flamethrower"];
+  "Reuniclus_100_Blaziken_100" -> "Reuniclus_20_Blaziken_0" [label="Psychic | Fire Punch"];
 }

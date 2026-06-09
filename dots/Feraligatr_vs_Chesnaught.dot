@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Feraligatr_0_Chesnaught_70" [label="Feraligatr (0%)\nChesnaught (70%)"];
+  "Feraligatr_0_Chesnaught_30" [label="Feraligatr (0%)\nChesnaught (30%)"];
+  "Feraligatr_100_Chesnaught_100" [label="Feraligatr (100%)\nChesnaught (100%)"];
+  "Feraligatr_100_Chesnaught_100" -> "Feraligatr_0_Chesnaught_30" [label="Ice Punch | Leaf Blade"];
+  "Feraligatr_100_Chesnaught_100" -> "Feraligatr_0_Chesnaught_30" [label="Ice Punch | Close Combat"];
+  "Feraligatr_100_Chesnaught_100" -> "Feraligatr_0_Chesnaught_70" [label="Liquidation | Leaf Blade"];
+  "Feraligatr_100_Chesnaught_100" -> "Feraligatr_0_Chesnaught_70" [label="Liquidation | Close Combat"];
 }

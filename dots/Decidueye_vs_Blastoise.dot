@@ -1,3 +1,10 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_50_Blastoise_0" [label="Decidueye (50%)\nBlastoise (0%)"];
+  "Decidueye_0_Blastoise_100" [label="Decidueye (0%)\nBlastoise (100%)"];
+  "Decidueye_100_Blastoise_100" [label="Decidueye (100%)\nBlastoise (100%)"];
+  "Decidueye_100_Blastoise_100" -> "Decidueye_0_Blastoise_100" [label="Leaf Blade | Ice Beam"];
+  "Decidueye_100_Blastoise_100" -> "Decidueye_50_Blastoise_0" [label="Leaf Blade | Hydro Pump"];
+  "Decidueye_100_Blastoise_100" -> "Decidueye_0_Blastoise_100" [label="Energy Ball | Ice Beam"];
+  "Decidueye_100_Blastoise_100" -> "Decidueye_50_Blastoise_0" [label="Energy Ball | Hydro Pump"];
 }

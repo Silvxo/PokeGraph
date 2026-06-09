@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_0_Alakazam_100" [label="Charizard (0%)\nAlakazam (100%)"];
+  "Charizard_100_Alakazam_100" [label="Charizard (100%)\nAlakazam (100%)"];
+  "Charizard_100_Alakazam_100" -> "Charizard_0_Alakazam_100" [label="Hurricane | Psystrike"];
+  "Charizard_100_Alakazam_100" -> "Charizard_0_Alakazam_100" [label="Hurricane | Psychic"];
+  "Charizard_100_Alakazam_100" -> "Charizard_0_Alakazam_100" [label="Shadow Ball | Psystrike"];
+  "Charizard_100_Alakazam_100" -> "Charizard_0_Alakazam_100" [label="Shadow Ball | Psychic"];
 }

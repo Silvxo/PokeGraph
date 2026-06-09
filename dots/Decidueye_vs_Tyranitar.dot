@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Decidueye_100_Tyranitar_0" [label="Decidueye (100%)\nTyranitar (0%)"];
+  "Decidueye_100_Tyranitar_100" [label="Decidueye (100%)\nTyranitar (100%)"];
+  "Decidueye_100_Tyranitar_100" -> "Decidueye_100_Tyranitar_0" [label="Leaf Blade | Crunch"];
+  "Decidueye_100_Tyranitar_100" -> "Decidueye_100_Tyranitar_0" [label="Leaf Blade | Ice Punch"];
+  "Decidueye_100_Tyranitar_100" -> "Decidueye_100_Tyranitar_0" [label="Energy Ball | Crunch"];
+  "Decidueye_100_Tyranitar_100" -> "Decidueye_100_Tyranitar_0" [label="Energy Ball | Ice Punch"];
 }

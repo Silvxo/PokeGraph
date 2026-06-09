@@ -1,3 +1,9 @@
 digraph G {
   node [shape=box, fontname="Arial"];
+  "Charizard_0_Gengar_100" [label="Charizard (0%)\nGengar (100%)"];
+  "Charizard_100_Gengar_100" [label="Charizard (100%)\nGengar (100%)"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Hurricane | Thunderbolt"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Hurricane | Sludge Bomb"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Shadow Ball | Thunderbolt"];
+  "Charizard_100_Gengar_100" -> "Charizard_0_Gengar_100" [label="Shadow Ball | Sludge Bomb"];
 }
